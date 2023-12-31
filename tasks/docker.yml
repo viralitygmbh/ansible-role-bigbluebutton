@@ -9,7 +9,7 @@
 - name: Install python docker packages
   pip:
     name:
-      - docker
+      - docker==6.1.3
       - docker-compose=={{ bbb_docker_compose_version }}
     state: "{{ bbb_state }}"
 

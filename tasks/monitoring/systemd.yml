@@ -54,6 +54,12 @@
   notify:
     - Restart monitoring service
 
+- name: Stop monitoring
+  systemd:
+    name: bigbluebutton-exporter
+    state: stopped
+  ignore_errors: true
+
 - name: Start monitoring
   systemd:
     name: bigbluebutton-exporter
